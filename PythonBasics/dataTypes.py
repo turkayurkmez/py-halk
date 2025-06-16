@@ -30,3 +30,8 @@ scientific_number = 1.5e6
 print("Bilimsel gösterim:", scientific_number)
 x =  27 // 4
 print(x)
+
+complex_number = 3 + 4j
+complex_number2 = complex(3,4)
+
+print(type(complex_number),complex_number2.real, complex_number2.imag)
