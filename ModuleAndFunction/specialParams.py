@@ -22,5 +22,23 @@ def get_employee_profile(**kwargs):
          print(f"{key.title()}, {value}") 
     
              
-            
+def create_dynamic_report(*categories, **details):
+   print("-- Rapor hazırlanıyor --")
+   print("="*60)
+   if categories:
+      print(f"Seçilen kategoriler: {", ".join(categories)}")
+
+   print("-- Detaylar --")
+   for key, value in details.items():
+      if isinstance(value,(int, float)) and key.endswith(("_tutari","_fiyat","_maas")):
+         print(f" {key}: {value} TL")
+      elif isinstance(value, (int,float)) and key.endswith(("_sayisi","_adedi")):
+         print(f" {key}: {value} adet")
+      else:
+         print(f" {key}: {value}")
+         
+   print("="*60)
+         
+
+   
 
