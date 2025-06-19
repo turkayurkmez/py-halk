@@ -1,4 +1,5 @@
 import product
+import bank_account
 
 
 if __name__ == "__main__":
@@ -71,9 +72,16 @@ if __name__ == "__main__":
     print("güncel fiyat: ",laptop.price)
 
 
-
+    
 
     # value = str(laptop)
     # print(value)
 
     #laptop.test()
+
+    account1 = bank_account.BankAcount("Türkay")
+    account2 = bank_account.BankAcount("Zeynep","vadeli",1000)
+    account2 = bank_account.BankAcount("Derya","yatırım",1000)
+
+
+    print(bank_account.BankAcount.count_of_accounts)
