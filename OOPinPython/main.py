@@ -81,7 +81,20 @@ if __name__ == "__main__":
 
     account1 = bank_account.BankAcount("Türkay")
     account2 = bank_account.BankAcount("Zeynep","vadeli",1000)
-    account2 = bank_account.BankAcount("Derya","yatırım",1000)
+    account3 = bank_account.BankAcount("Derya","yatırım",1000)
+
+
 
 
     print(bank_account.BankAcount.count_of_accounts)
+
+    account1.calculate_interest()
+    bank_account.BankAcount.update_rate(52)
+    account2.calculate_interest()
+    account3.calculate_interest()
+    account1.calculate_interest()
+
+    bank_account.BankAcount.compare_balance(5000,5450)
+    account1.compare_balance(3,5)
+    account1.update_rate(49)
+    account3.calculate_interest()
